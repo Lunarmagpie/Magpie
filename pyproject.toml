@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "magpie"
+version = "0.1.0"
+description = "The music bot written with Pincer & Songbird-py."
+authors = ["Lunarmagpie <Bambolambo0@gmail.com>"]
+license = "GPL-2.0-only"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+songbird-py = "^0.1.1"
+pincer = "^0.15.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+pylint = "^2.12.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
