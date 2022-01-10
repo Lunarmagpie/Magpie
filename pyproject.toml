@@ -9,10 +9,12 @@ license = "GPL-2.0-only"
 python = "^3.8"
 songbird-py = "^0.1.1"
 pincer = "^0.15.2"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
 pylint = "^2.12.2"
+autopep8 = "^1.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
