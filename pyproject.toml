@@ -7,9 +7,10 @@ license = "GPL-2.0-only"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-songbird-py = "^0.1.1"
-pincer = "^0.15.2"
+songbird-py = "^0.1.2"
+pincer = { git = "https://github.com/Lunarmagpie/Pincer.git",  branch = "mypytest" }
 python-dotenv = "^0.19.2"
+mypy = "^0.931"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
