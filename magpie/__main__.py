@@ -1,4 +1,4 @@
-from typing import Annotated, Dict, Optional
+from typing import Annotated, Dict, Optional, NamedTuple
 
 from pincer import Client
 from pincer.commands import ChannelTypes
@@ -7,7 +7,7 @@ from pincer.objects import MessageContext, Channel, ChannelType
 from pincer.core import Gateway
 from pincer.utils.snowflake import Snowflake
 
-from songbird import ytdl
+from songbird import ytdl, Queue
 from songbird.pincer import Voicebox
 from songbird.songbird import YtdlError
 
@@ -15,11 +15,16 @@ from magpie.config import Config
 from magpie.utils.command import command
 
 
+class ChannelVoiceInfo(NamedTuple):
+    voice: Voicebox
+    queue: Queue
+
+
 class Bot(Client):
 
     def __init__(self, token: str):
         self.shard: Optional[Gateway] = None
-        self.voice: Dict[Snowflake, Voicebox] = {}
+        self.voice: Dict[Snowflake, ChannelVoiceInfo] = {}
 
         super().__init__(token)
 
@@ -41,8 +46,12 @@ class Bot(Client):
         if not self.shard or not ctx.guild_id:
             return f"Cannot join {channel.mention}"
 
-        self.voice[ctx.guild_id] = await Voicebox.connect(
+        voice = await Voicebox.connect(
             self, self.shard, ctx.guild_id, channel.id
+        )
+        self.voice[ctx.guild_id] = ChannelVoiceInfo(
+            voice=voice,
+            queue=Queue(voice)
         )
 
         return f"I joined {channel.mention}"
@@ -66,7 +75,13 @@ class Bot(Client):
         except YtdlError:
             return f"Could not find song ({url})"
 
-        await self.voice[ctx.guild_id].play_source(source)
+        queue = self.voice[ctx.guild_id].queue
+
+        queue.append(source)
+
+        if len(queue) == 1:
+            return "Playing song"
+        return "Added song to queue"
 
 
 Bot(token=Config.get_env("TOKEN")).run()

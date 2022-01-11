@@ -284,7 +284,7 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "songbird-py"
-version = "0.1.2"
+version = "0.1.3"
 description = "A Discord voice library using Python Songbird bindings."
 category = "main"
 optional = false
@@ -365,7 +365,7 @@ websockets = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "cc5c6bdb800dc9a9980c246600dd2d471ef08fd5ec033c8348ade987703f9c02"
+content-hash = "ffa8fb434d3b70637e4a2b15968bcda070806e1e35aeefc928085ec5f691cfd8"
 
 [metadata.files]
 aiohttp = [
@@ -757,16 +757,16 @@ python-dotenv = [
     {file = "python_dotenv-0.19.2-py2.py3-none-any.whl", hash = "sha256:32b2bdc1873fd3a3c346da1c6db83d0053c3c62f28f1f38516070c4c8971b1d3"},
 ]
 songbird-py = [
-    {file = "songbird_py-0.1.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:717be4b6aefdb04140952befcaf3baf1df2828deadd85a0aa501bbd1fea7609d"},
-    {file = "songbird_py-0.1.2-cp310-cp310-manylinux_2_24_x86_64.whl", hash = "sha256:8259c87b989439683b1035c85d6a177a4e79470704ac80222e905e9887e4e7d3"},
-    {file = "songbird_py-0.1.2-cp310-none-win_amd64.whl", hash = "sha256:49dd6a5f013f810998efea0ceff55b722aed72b58dbb6dcce868733f50a08372"},
-    {file = "songbird_py-0.1.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7ecf03dc55fb15fd72036e5441da6174cf104b5174645f571262fd50835de376"},
-    {file = "songbird_py-0.1.2-cp38-cp38-manylinux_2_24_x86_64.whl", hash = "sha256:72017cbac76d61b25645589ee6871c0222f0ba7725ca71af35d540d6cdd796f6"},
-    {file = "songbird_py-0.1.2-cp38-none-win_amd64.whl", hash = "sha256:b8379a8556a2ceaa42c817788ab340ee6d364edce6d5cba7b6fa4e1cf05ae2d1"},
-    {file = "songbird_py-0.1.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:6650af34501176d35194da256899c091565236b595a9750b68cc8dc117dffc47"},
-    {file = "songbird_py-0.1.2-cp39-cp39-manylinux_2_24_x86_64.whl", hash = "sha256:6ce276325330db82084a27dcfef9d3af13ac1f56c75e0c0142a1c6193c07d682"},
-    {file = "songbird_py-0.1.2-cp39-none-win_amd64.whl", hash = "sha256:d777928d1790a04693152bb19085eca9235dda6616b571fbc1aeb38f85bc7bd7"},
-    {file = "songbird_py-0.1.2.tar.gz", hash = "sha256:aa54aefda3d58c4c743fd99de01cb7d04e499e224a21700091e4588459e62c08"},
+    {file = "songbird_py-0.1.3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:f1cc225417981633c5d6a3ed778372510f52947a21f27ca6d1c6dc65fc368065"},
+    {file = "songbird_py-0.1.3-cp310-cp310-manylinux_2_24_x86_64.whl", hash = "sha256:f00031c6bd91dd6c6401e7d96255b9a8b08a8a784efff63aa5e09f8bccc44458"},
+    {file = "songbird_py-0.1.3-cp310-none-win_amd64.whl", hash = "sha256:c0df2b77a51f252baebff19ab7367001e9135934a4a5ad988e78295bd810acac"},
+    {file = "songbird_py-0.1.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:b540ff697ee726d5f97cd0a08858ea16430a4b916c507eb496a13b121015d2b3"},
+    {file = "songbird_py-0.1.3-cp38-cp38-manylinux_2_24_x86_64.whl", hash = "sha256:c9547e556222c516c0a83f3856d16bd51c8b3e4aec3ff098c9becd938abdc234"},
+    {file = "songbird_py-0.1.3-cp38-none-win_amd64.whl", hash = "sha256:a4cfae2730d8a2811375fce69de915068d562cc5105697ef0308bd9b7f15a5d0"},
+    {file = "songbird_py-0.1.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:77d095336028c410e1dd781ed0323c61666a180992ab28a7c7aca0fedb09993c"},
+    {file = "songbird_py-0.1.3-cp39-cp39-manylinux_2_24_x86_64.whl", hash = "sha256:8c63f9374abae8830d71da6dfdbcd739c302bc129c9ccfb4bccb6a237c1a76c1"},
+    {file = "songbird_py-0.1.3-cp39-none-win_amd64.whl", hash = "sha256:ef0b0dc041956d72dabc1a706bfe37d91b199e4b5440c6f8256d2f3edc5df6ab"},
+    {file = "songbird_py-0.1.3.tar.gz", hash = "sha256:200536d983d3e1856677c997376754ef3df339ae34a9a6947f9d665208837a07"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
